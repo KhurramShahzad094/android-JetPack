@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_view"
+    app:startDestination="@id/fragmentOne"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.khurram.architecturecomponent.view.fragment.FragmentOne"
+        android:label="fragment one"
+        tools:layout="@layout/fragment_one" />
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.khurram.architecturecomponent.view.fragment.FragmentTwo"
+        android:label="fragment two"
+        tools:layout="@layout/fragment_two" />
+    <fragment
+        android:id="@+id/fragmentThree"
+        android:name="com.khurram.architecturecomponent.view.fragment.FragmentThree"
+        android:label="fragment_three"
+        tools:layout="@layout/fragment_three" >
+        <action
+            android:id="@+id/action_fragmentThree_to_fragment_four"
+            app:destination="@id/fragment_four" />
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentFive"
+            app:destination="@id/fragmentFive" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_four"
+        android:name="com.khurram.architecturecomponent.view.fragment.Fragment_four"
+        android:label="fragment_four"
+        tools:layout="@layout/fragment_four" >
+        <argument
+            android:name="lastName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="firstName"
+            app:argType="string"
+            app:nullable="true" />
+
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFive"
+        android:name="com.khurram.architecturecomponent.view.fragment.FragmentFive"
+        android:label="fragment_five"
+        tools:layout="@layout/fragment_five" >
+        <action
+            android:id="@+id/action_fragmentFive_to_fragmentOne"
+            app:destination="@id/fragmentOne"
+            app:popUpTo="@id/fragmentOne"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
