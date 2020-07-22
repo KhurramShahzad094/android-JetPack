@@ -73,7 +73,7 @@ dependencies {
     def hilt_version = "2.28-alpha"
     def nav_version = "2.3.0"
     def room_version = "2.2.5"
-    def fragment = "1.2.0-alpha02"
+    def fragment = "1.2.5"
     def arch_version = '2.2.0'
     def retrofitVersion = '2.7.0'
     def okHttpVersion = '3.10.0'

@@ -6,6 +6,6 @@ import androidx.lifecycle.ViewModel
 
 class SharedViewModel  : @ViewModelInject ViewModel() {
 
-    var data = MutableLiveData<String>()
+    public var data = MutableLiveData<String>()
 
 }
